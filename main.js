@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
       checkbox: document.getElementById('garden_led'),
       value: document.getElementById('value4'),
       dbPath: 'karan/garden'
+    },
+
+    {
+      checkbox: document.getElementById('door'),
+      value: document.getElementById('value4'),
+      dbPath: 'karan/door'
     }
   ];
 
