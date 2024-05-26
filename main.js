@@ -36,24 +36,24 @@ onAuthStateChanged(auth, (user) => {
 document.addEventListener('DOMContentLoaded', function() {
   const minerals = [
     {
-      checkbox: document.getElementById('living'),
+      checkbox: document.getElementById('living_led'),
       value: document.getElementById('value1'),
       dbPath: 'karan/living'
     },
     {
-      checkbox: document.getElementById('kitchen'),
+      checkbox: document.getElementById('kitchen_led'),
       value: document.getElementById('value2'),
       dbPath: 'karan/kitchen'
     },
     {
-      checkbox: document.getElementById('dining'),
-      value: document.getElementById('value4'),
+      checkbox: document.getElementById('dining_led'),
+      value: document.getElementById('value3'),
       dbPath: 'karan/dining'
     },
 
     {
-      checkbox: document.getElementById('garden'),
-      value: document.getElementById('water'),
+      checkbox: document.getElementById('garden_led'),
+      value: document.getElementById('value4'),
       dbPath: 'karan/garden'
     }
   ];
@@ -82,28 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  // Function to read sensor values from Firebase
-  function readSensorValues() {
-    const sensorRef = ref(db, 'Sensor');
-    onValue(sensorRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        console.log("Sensor data:", data);
-        document.getElementById('humidity').innerText = data.Humidity;
-        document.getElementById('soilMoisture').innerText = data.SoilMoisture;
-        document.getElementById('solarCurrent').innerText = data['Solar Current'];
-        document.getElementById('temperature').innerText = data.Temperature;
-        document.getElementById('ldrData').innerText = data.ldr_data;
-        document.getElementById('solarPower').innerText = data.solarPower;
-        document.getElementById('solarVoltage').innerText = data.solarVoltage;
-      } else {
-        console.log("No sensor data available");
-      }
-    }, (error) => {
-      console.error("Error reading sensor data:", error);
-    });
-  }
-
-  // Call the function to read sensor values
-  readSensorValues();
+  
 });
