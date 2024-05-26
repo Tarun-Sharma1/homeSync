@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="plant-image">
+            <img src="main_image.jpg" alt="Plant Image">
+        </div>
+        <h1 id="user_greeting">Hi! </h1>
+
+        <div class="toggle-controls">
+            <div class="toggle-item">
+                <label for="living">Living Room Light:</label>
+                <input type="checkbox" id="living" class="toggle-switch">
+                
+            </div>
+
+            <div class="toggle-item">
+                <label for="kitchen">Kitchen LIght:</label>
+                <input type="checkbox" id="kitchen" class="toggle-switch" checked>
+                
+            </div>
+
+            <div class="toggle-item">
+                <label for="dining">Dining Room Light:</label>
+                <input type="checkbox" id="dining" class="toggle-switch" checked>
+                
+            </div>
+
+            <div class="toggle-item">
+                <label for="garden">Garden Light:</label>
+                <input type="checkbox" id="garden" class="toggle-switch" checked>
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script type="module" src="main.js" defer></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</body>
+</html>
